@@ -129,10 +129,10 @@ export default class VideoPlayer extends React.Component {
 
   static defaultProps = {
     // Animations
-    fadeInDuration: 200,
-    fadeOutDuration: 1000,
-    quickFadeOutDuration: 200,
-    hideControlsTimerDuration: 4000,
+    fadeInDuration: 0,
+    fadeOutDuration: 0,
+    quickFadeOutDuration: 0,
+    hideControlsTimerDuration: 0,
     // Appearance (assets and styles)
     playIcon: PlayIcon,
     pauseIcon: PauseIcon,
