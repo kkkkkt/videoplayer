@@ -108,6 +108,7 @@ export default class VideoPlayer extends React.Component {
     videoWidth: PropTypes.number,
     videoHeight: PropTypes.number,
 
+    centeredContentWidth: PropTypes.number,
     /**
      * Props to use into the underlying <Video>. Useful for configuring autoplay, playback speed, and other Video properties.
      * See Expo documentation on <Video>. `source` is required.
@@ -133,6 +134,7 @@ export default class VideoPlayer extends React.Component {
     fadeOutDuration: 0,
     quickFadeOutDuration: 0,
     hideControlsTimerDuration: 0,
+    centeredContentWidth: 100,
     // Appearance (assets and styles)
     playIcon: PlayIcon,
     pauseIcon: PauseIcon,
@@ -541,7 +543,7 @@ export default class VideoPlayer extends React.Component {
   render() {
     const videoWidth = this.props.videoWidth || Dimensions.get('window').width;
     const videoHeight = this.props.videoHeight || videoWidth * (9 / 16);    
-    const centeredContentWidth = 60;
+    const centeredContentWidth = this.props.centeredContentWidth || 60;
 
     const PlayIcon = this.props.playIcon;
     const PauseIcon = this.props.pauseIcon;
